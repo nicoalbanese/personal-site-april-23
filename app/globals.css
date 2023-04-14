@@ -1,27 +1,42 @@
 @tailwind base;
-@tailwind components;
-@tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
+@layer base {
+  body {
+    @apply bg-white dark:bg-slate-950 text-black dark:text-slate-300;
+  }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+  h1 {
+    @apply text-2xl font-semibold mb-4;
+  }
+  h2 {
+    @apply text-xl font-semibold;
+  }
+  h3 {
+    @apply text-lg font-semibold;
+  }
+
+  p > a {
+    @apply dark:text-sky-400 hover:dark:text-sky-300 text-sky-600 hover:text-sky-800 underline transition duration-200;
+  }
+
+  nav > ul > li {
+    @apply hover:dark:text-white dark:text-slate-500 text-slate-400 hover:text-slate-900 transition duration-200;
+  }
+  li.active-route {
+    @apply dark:text-white text-slate-900;
+  }
+
+  main.content > p {
+    @apply mb-4;
+  }
+
+  main.content {
+    @apply md:max-w-3xl w-full;
+  }
+
+  input[type="submit"] {
+    @apply cursor-pointer rounded-md dark:bg-white px-3 py-2 text-sm font-semibold dark:text-gray-900 shadow-sm ring-1 ring-inset dark:ring-gray-300 hover:dark:bg-gray-200 transition duration-200;
   }
 }
-
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
-}
+@tailwind components;
+@tailwind utilities;
