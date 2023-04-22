@@ -21,13 +21,13 @@ export const getPosts = async () => {
   return data.records as Post[];
 };
 
-export const getPostWithSlug = async (slug: string) => {
-  // console.log(slug);
-  const res = await fetch(
-    airtableBaseURL.concat("&filterByFormula=", encodeURI(`{slug}="${slug}"`)),
-    { headers }
-  );
-  const data = await res.json();
+// export const getPostWithSlug = async (slug: string) => {
+//   // console.log(slug);
+//   const res = await fetch(
+//     airtableBaseURL.concat("&filterByFormula=", encodeURI(`{slug}="${slug}"`)),
+//     { headers }
+//   );
+//   const data = await res.json();
 
-  return { raw: data.records[0] as Post };
-};
+//   return { raw: data.records[0] as Post };
+// };

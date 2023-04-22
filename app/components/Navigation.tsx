@@ -11,11 +11,15 @@ const ROUTES = [
 ];
 
 function extractBaseRoute(input: string): string | null {
-  const regex = /^\/([^\/]+)/;
-  const match = input.match(regex);
+  if (input == "/") {
+    return "/";
+  } else {
+    const regex = /^\/([^\/]+)/;
+    const match = input.match(regex);
 
-  if (match && match[1]) {
-    return "/".concat(match[1]);
+    if (match && match[1]) {
+      return "/".concat(match[1]);
+    }
   }
 
   return null;

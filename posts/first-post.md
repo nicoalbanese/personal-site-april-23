@@ -1,0 +1,5 @@
+I'm excited to release Deal Flow OS, an open-source(ish) deal flow management system. This system was built to cover the deal flow management requirements of Ascension, an early-stage VC fund.
+
+<Loom url="https://www.loom.com/embed/8e2852c9e6874e80a1642dc1fb385bea" caption="Video demo walking through Dealflow OS"  />
+
+Over the last ~5 years, we ([Ascension](https://ascension.vc)) have tried many solutions (Affinity, Attio, Google Sheets, Notion) for managing deal flow but for a variety of reasons, none of them stuck. While the product is important, ultimately a system of any kind is only as good as the people using it, and the key requirement for us has always been, at its core, an easy and reliable way of adding and querying opportunities. Some products were super powerful, but too intimidating to configure. Others were easy to configure, but didn’t play nice with integrations and lacked extensibility.
