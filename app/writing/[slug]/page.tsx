@@ -5,8 +5,7 @@ import { MDXRemote } from "next-mdx-remote/rsc";
 import type { MDXComponents } from "mdx/types";
 import { Suspense } from "react";
 import { getPostBySlug } from "@/lib/writing";
-import moment from "moment";
-export const revalidate = 60;
+export const revalidate = 10;
 
 const COMPONENTS: MDXComponents = {
   h1: ({ children }) => <h1 className="py-3">{children}</h1>,
@@ -21,6 +20,7 @@ const COMPONENTS: MDXComponents = {
 
 const Page = async ({ params }: { params: { slug: string } }) => {
   const post = await getPostBySlug(params.slug);
+  console.log(post)
 
   return (
     <main className="max-w-5xl content">
