@@ -1,16 +1,16 @@
 [
   {
+    "title": "Deal Flow OS",
+    "path": "./posts/dealflow-os.md",
+    "slug": "dealflow-os",
+    "id": 2,
+    "publishDate": "22/03/2023"
+  },
+  {
     "title": "Managing a VC Portfolio with Airtable",
     "path": "./posts/managing-vc-portfolio-airtable.md",
     "slug": "managing-vc-portfolio-airtable",
     "id": 1,
     "publishDate": "08/12/2022"
-  },
-  {
-    "title": "First Post",
-    "path": "./posts/first-post.md",
-    "slug": "first-post",
-    "id": 0,
-    "publishDate": "22/03/2023"
   }
 ]
