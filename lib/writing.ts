@@ -1,4 +1,7 @@
-import fs from "fs";
+import fs from "fs/promises";
+import POSTS from "./POSTS.json";
+import moment from "moment";
+import path from "path";
 
 type Post = {
   title: string;
@@ -8,19 +11,22 @@ type Post = {
   publishDate: string;
 };
 
-import POSTS from "./POSTS.json";
-import moment from "moment";
-import path from "path";
-
 export const getAllMDPosts = () => {
   return POSTS as Post[];
 };
 
-export const getPostBySlug = (slug: string) => {
+export const getPostBySlug = async (slug: string) => {
   const foundPost = POSTS.find((post) => post.slug === slug);
-  const relativeDate = moment(foundPost?.publishDate as string, "DD/MM/YYYY").fromNow();
-  const fullPath = path.join(process.cwd(), 'posts', `${foundPost?.slug as string}.md`);
-  const markdown = fs.readFileSync(fullPath as string, "utf-8");
+  const relativeDate = moment(
+    foundPost?.publishDate as string,
+    "DD/MM/YYYY"
+  ).fromNow();
+  const fullPath = path.join(
+    process.cwd(),
+    "posts",
+    `${foundPost?.slug as string}.md`
+  );
+  const markdown = await fs.readFile(fullPath as string, "utf-8");
 
   return { ...foundPost, markdown, relativeDate };
 };
