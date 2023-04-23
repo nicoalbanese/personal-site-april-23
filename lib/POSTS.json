@@ -1,14 +1,14 @@
 [
   {
     "title": "Second Post",
-    "path": "posts/second-post.md",
+    "path": "./posts/second-post.md",
     "slug": "second-post",
     "id": 1,
     "publishDate": "19/04/2023"
   },
   {
     "title": "First Post",
-    "path": "posts/first-post.md",
+    "path": "./posts/first-post.md",
     "slug": "first-post",
     "id": 0,
     "publishDate": "22/03/2023"
