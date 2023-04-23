@@ -6,6 +6,8 @@ const refresh_token = process.env.NEXT_PUBLIC_SPOTIFY_REFRESH_TOKEN;
 
 const basic = Buffer.from(`${client_id}:${client_secret}`).toString("base64");
 const NOW_PLAYING_ENDPOINT = `https://api.spotify.com/v1/me/player/currently-playing`;
+const TOP_ARTISTS_ENDPOINT = `https://api.spotify.com/v1/me/top/artists?time_range=short_term`;
+const TOP_SONGS_ENDPOINT = `https://api.spotify.com/v1/me/top/tracks?time_range=short_term`;
 const TOKEN_ENDPOINT = `https://accounts.spotify.com/api/token`;
 
 const getAccessToken = async () => {
@@ -34,11 +36,33 @@ export const getNowPlaying = async () => {
   try {
     const nowPlaying = await fetch(NOW_PLAYING_ENDPOINT, {
       headers: {
-        Authorization: `Bearer BQBc8j0tQHhUrzqPKoH8S_WF4_Vk_nxtCIscvFpIfekiKpv2F0BvrwFHIQDVQKq-9Jxsyp7X9Jb0shUHx1IacyhvXZ6iVHOikl3sZbXkYSydaO3BrXklKgoqTkDJF2FW7b_bgdfWvT5--g5I5aTesYeywppXQQm9bwJkWmX9AKNE2hCmNSx_lObvF1mqTg`,
+        Authorization: `Bearer ${access_token}`,
       },
     });
     return await nowPlaying.json();
   } catch (e) {
+    return {};
+  }
+};
+
+export const getTopTracksAndArtist = async () => {
+  const { access_token } = await getAccessToken();
+  try {
+    const topArtists = await fetch(TOP_ARTISTS_ENDPOINT, {
+      headers: {
+        Authorization: `Bearer ${access_token}`,
+      },
+    });
+    const topSongs = await fetch(TOP_SONGS_ENDPOINT, {
+      headers: {
+        Authorization: `Bearer ${access_token}`,
+      },
+    });
+    const songs = await topSongs.json();
+    const artists = await topArtists.json();
+    return { songs, artists };
+  } catch (e) {
+    console.log(e)
     return {};
   }
 };

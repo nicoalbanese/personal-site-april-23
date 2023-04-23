@@ -1,15 +1,38 @@
 import Link from "next/link";
 import Image from "next/image";
-import { getNowPlaying } from "@/lib/spotify";
+import { getNowPlaying, getTopTracksAndArtist } from "@/lib/spotify";
+import CurrentlyListening from "../components/spotify/CurrentlyListening";
+import TopSongs from "../components/spotify/TopSongs";
+import Seperator from "../components/Seperator";
+import TopArtists from "../components/spotify/TopArtists";
+import { Suspense } from "react";
 
-export const revalidate = 1;
+export const revalidate = 10;
 
 const Music = async () => {
-  const data = await getNowPlaying();
+  const nowPlaying = await getNowPlaying();
+  const topArtistAndSongs = await getTopTracksAndArtist();
   return (
     <main className="content">
-      <pre>{JSON.stringify(data, null, 2)}</pre>
       <h1>Music</h1>
+      <Suspense fallback={<Skeleton />}>
+        <div className="mb-6">
+          <CurrentlyListening data={nowPlaying} />
+        </div>
+        <div className="sm:grid sm:grid-cols-3">
+          <div className="mb-6 col-span-2">
+            <h3>Top Songs this Month</h3>
+            <TopSongs data={topArtistAndSongs.songs} />
+          </div>
+          <div className="mb-6">
+            <h3>Top Artists this Month</h3>
+            <TopArtists data={topArtistAndSongs.artists} />
+          </div>
+        </div>
+      </Suspense>
+
+      <Seperator />
+      <h1>Making Music</h1>
       <p>
         I used to dj and make music under the name Guac (long story 😂). I{" "}
         {"don't"} make music much anymore but am an avid listener.
@@ -143,3 +166,19 @@ const Music = async () => {
 };
 
 export default Music;
+
+const Skeleton = () => {
+  return (
+    <div className="grid-cols-3 grid">
+      <div className="col-span-2 pr-2">
+        <h3>Top Songs this Month</h3>
+        <div className=" mt-4 h-[350px] bg-slate-800 animate-pulse rounded-lg" />
+      </div>
+      <div className="pr-2">
+        <h3>Top Artists this Month</h3>
+        <div className=" mt-4 h-[350px] bg-slate-800 animate-pulse rounded-lg" />
+      </div>
+      
+    </div>
+  );
+};

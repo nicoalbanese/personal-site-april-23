@@ -45,11 +45,11 @@ export default Page;
 const LoadingSkeleton = () => {
   return (
     <>
-      <h1 className="bg-slate-200 animate-pulse h-8 w-[200px]"></h1>
-      <p className="bg-slate-200 h-[100px] w-full animate-pulse mb-6"></p>
-      <p className="bg-slate-200 h-[50px] max-w-[500px] animate-pulse mb-6"></p>
-      <p className="bg-slate-200 h-[100px] w-full animate-pulse mb-6"></p>
-      <p className="bg-slate-200 h-[75px] w-full animate-pulse mb-6"></p>
+      <h1 className="bg-slate-200 dark:bg-slate-800 rounded-lg  animate-pulse h-8 w-[200px]"></h1>
+      <p className="bg-slate-200  dark:bg-slate-800 rounded-lg h-[100px] w-full animate-pulse mb-6"></p>
+      <p className="bg-slate-200  dark:bg-slate-800 rounded-lg h-[50px] max-w-[500px] animate-pulse mb-6"></p>
+      <p className="bg-slate-200  dark:bg-slate-800 rounded-lg h-[100px] w-full animate-pulse mb-6"></p>
+      <p className="bg-slate-200  dark:bg-slate-800 rounded-lg h-[75px] w-full animate-pulse mb-6"></p>
     </>
   );
 };
