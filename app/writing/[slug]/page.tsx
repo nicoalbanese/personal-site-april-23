@@ -18,20 +18,14 @@ const COMPONENTS: MDXComponents = {
   ),
 };
 
-export async function getStaticPaths() {
+export async function generateStaticParams() {
   const allPosts = await getAllMDPosts();
   const paths = allPosts.map((post) => {
     return {
-      params: {
-        slug: post.slug,
-      },
+      slug: post.slug,
     };
   });
-
-  return {
-    paths,
-    fallback: false, // can also be true or 'blocking'
-  };
+  return paths;
 }
 
 const Page = async ({ params }: { params: { slug: string } }) => {
