@@ -1,4 +1,3 @@
-import { getPosts } from "@/lib/airtable";
 import { getAllMDPosts } from "@/lib/writing";
 import { Metadata } from "next";
 import Link from "next/link";
