@@ -4,6 +4,7 @@ import { MDXRemote } from "next-mdx-remote/rsc";
 import type { MDXComponents } from "mdx/types";
 import { Suspense } from "react";
 import { getAllMDPosts, getPostBySlug } from "@/lib/writing";
+import Youtube from "@/app/components/Youtube";
 export const revalidate = 10;
 
 export async function generateMetadata({
@@ -25,6 +26,9 @@ const COMPONENTS: MDXComponents = {
   ),
   Loom: ({ url = "Hello", caption }: { url: string; caption?: string }) => (
     <Loom url={url} caption={caption} />
+  ),
+  Youtube: ({ url = "Hello", caption }: { url: string; caption?: string }) => (
+    <Youtube url={url} caption={caption} />
   ),
 };
 

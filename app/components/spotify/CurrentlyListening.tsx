@@ -8,7 +8,7 @@ const CurrentlyListening = ({ data }: { data: NowPlaying }) => {
         <div>
           <h3>Currently Listening</h3>
 
-          <div className="grid grid-cols-8 items-center mt-2">
+          <div className="grid sm:grid-cols-8 grid-cols-3 items-center mt-2">
             <div className="col-span-1 mr-2">
               <Image
                 src={data.item.album.images[0].url}
@@ -18,7 +18,7 @@ const CurrentlyListening = ({ data }: { data: NowPlaying }) => {
                 className="rounded-lg"
               />
             </div>
-            <div className="col-span-7">
+            <div className="sm:col-span-7 col-span-2">
               <div className="">{data.item.name}</div>
               <div className="text-sm dark:text-slate-400 text-slate-600">
                 {data.item.artists.map((artist: any) => (

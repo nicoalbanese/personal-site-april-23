@@ -1,10 +1,10 @@
 [
   {
-    "title": "Second Post",
-    "path": "./posts/second-post.md",
-    "slug": "second-post",
+    "title": "Managing a VC Portfolio with Airtable",
+    "path": "./posts/managing-vc-portfolio-airtable.md",
+    "slug": "managing-vc-portfolio-airtable",
     "id": 1,
-    "publishDate": "19/04/2023"
+    "publishDate": "08/12/2022"
   },
   {
     "title": "First Post",
