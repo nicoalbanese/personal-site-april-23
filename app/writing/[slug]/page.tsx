@@ -1,4 +1,3 @@
-// "use client";
 // import { getPostWithSlug } from "@/lib/airtable";
 import Loom from "@/app/components/Loom";
 import { MDXRemote } from "next-mdx-remote/rsc";
@@ -6,6 +5,17 @@ import type { MDXComponents } from "mdx/types";
 import { Suspense } from "react";
 import { getAllMDPosts, getPostBySlug } from "@/lib/writing";
 export const revalidate = 10;
+
+export async function generateMetadata({
+  params,
+}: {
+  params: { slug: string };
+}) {
+  const post = await getPostBySlug(params.slug);
+  return {
+    title: post.title,
+  };
+}
 
 const COMPONENTS: MDXComponents = {
   h1: ({ children }) => <h1 className="py-3">{children}</h1>,

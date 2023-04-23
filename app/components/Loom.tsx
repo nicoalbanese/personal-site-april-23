@@ -2,7 +2,7 @@ const Loom = ({ url, caption }: { url: string; caption?: string }) => {
   return (
     <div className="my-4 max-w-[750px] mx-auto">
       <div
-      className="bg-slate-200"
+      className="bg-slate-200 dark:bg-slate-800"
         style={{
           position: "relative",
           paddingBottom: "55.27123848515865%",

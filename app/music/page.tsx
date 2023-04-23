@@ -6,8 +6,13 @@ import TopSongs from "../components/spotify/TopSongs";
 import Seperator from "../components/Seperator";
 import TopArtists from "../components/spotify/TopArtists";
 import { Suspense } from "react";
+import { Metadata } from "next";
 
 export const revalidate = 10;
+
+export const metadata: Metadata = {
+  title: 'Music',
+};
 
 const Music = async () => {
   const nowPlaying = await getNowPlaying();
