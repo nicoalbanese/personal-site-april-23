@@ -6,7 +6,7 @@ import { Suspense } from "react";
 export const revalidate = 10;
 
 const Writing = async () => {
-  const posts = getAllMDPosts();
+  const posts = await getAllMDPosts();
 
   return (
     <main>

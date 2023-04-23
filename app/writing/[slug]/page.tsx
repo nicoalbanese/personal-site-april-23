@@ -4,7 +4,7 @@ import Loom from "@/app/components/Loom";
 import { MDXRemote } from "next-mdx-remote/rsc";
 import type { MDXComponents } from "mdx/types";
 import { Suspense } from "react";
-import { getPostBySlug } from "@/lib/writing";
+import { getAllMDPosts, getPostBySlug } from "@/lib/writing";
 export const revalidate = 10;
 
 const COMPONENTS: MDXComponents = {
@@ -18,9 +18,25 @@ const COMPONENTS: MDXComponents = {
   ),
 };
 
+export async function getStaticPaths() {
+  const allPosts = await getAllMDPosts();
+  const paths = allPosts.map((post) => {
+    return {
+      params: {
+        slug: post.slug,
+      },
+    };
+  });
+
+  return {
+    paths,
+    fallback: false, // can also be true or 'blocking'
+  };
+}
+
 const Page = async ({ params }: { params: { slug: string } }) => {
   const post = await getPostBySlug(params.slug);
-  console.log(post)
+  // console.log(post);
 
   return (
     <main className="max-w-5xl content">
