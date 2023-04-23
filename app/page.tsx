@@ -1,10 +1,9 @@
 import Image from "next/image";
 import { Inter } from "next/font/google";
 import Link from "next/link";
-import { getMDPosts } from "@/lib/writing";
 
 const inter = Inter({ subsets: ["latin"] });
-const revalidate = 1;
+const revalidate = 10;
 
 export default function Home() {
   
