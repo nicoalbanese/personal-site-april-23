@@ -1,5 +1,14 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  async redirects() {
+    return [
+      {
+        source: "/projects/dealflow-os",
+        destination: "/writing/dealflow-os",
+        permanent: true,
+      },
+    ];
+  },
   experimental: {
     appDir: true,
   },
