@@ -14,16 +14,16 @@ const Investments = async () => {
   return (
     <main className="content">
       <h1>Investments</h1>
-      <p>
-        I work at <Link href={"https://ascension.vc"}>Ascension</Link>,
-        investing at pre-seed and seed in the UK. I have been fortunate to work
-        with a number of incredible founders.
-      </p>
       {/* <p> */}
-      {/*   I worked at <Link href={"https://ascension.vc"}>Ascension</Link> for 5 */}
-      {/*   years (2018-2023), investing at pre-seed and seed in the UK. I was */}
-      {/*   fortunate to work with a number of incredible founders. */}
+      {/*   I work at <Link href={"https://ascension.vc"}>Ascension</Link>, */}
+      {/*   investing at pre-seed and seed in the UK. I have been fortunate to work */}
+      {/*   with a number of incredible founders. */}
       {/* </p> */}
+      <p>
+        I worked at <Link href={"https://ascension.vc"}>Ascension</Link> for 5
+        years (2018-2023), investing at pre-seed and seed in the UK. I was
+        fortunate to work with a number of incredible founders.
+      </p>
       <div className="mt-4">
         <div className="">
           {investments.map((investment) => (
