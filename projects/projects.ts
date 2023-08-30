@@ -39,4 +39,36 @@ export const projectsData: Project[] = [
       loom: "https://twitter.com/nicoalbanese10/status/1385157904731361280",
     },
   },
+  {
+    title: "Ascension Website",
+    description:
+      "Nextjs app that dynamically pulls data from our portfolio management system on Airtable saving hours of manual data entry.",
+    id: 4,
+    links: {
+      github: "https://github.com/nicoalbanese/basextend-mvp",
+      loom: "https://twitter.com/nicoalbanese10/status/1385157904731361280",
+    },
+  },
+  {
+    title: "Debut Sessions",
+    description:
+      "During COVID, launched a live interactive pitch competition powered by the community with Kieran Hill.",
+    id: 5,
+    links: {
+      loom: "https://www.youtube.com/channel/UCqpYTWbwTmvIMQoUAMZ39Mg/videos",
+      github: "https://debutsessions.co.uk",
+    },
+  },
+  {
+    title: "Portfolio Management System",
+    description:
+      "Open Source Airtable Base for tracking VC investments and communicating with LPs.",
+    id: 6,
+    links: {
+      loom: "https://www.youtube.com/watch?v=Is60Iji0tZw&",
+      github:
+        "https://www.airtable.com/universe/exp6xDW3DtWVmZTAg/vc-portfolio-database-template",
+      article: "/writing/managing-vc-portfolio-airtable",
+    },
+  },
 ];
