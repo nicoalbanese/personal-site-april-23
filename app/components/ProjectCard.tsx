@@ -4,7 +4,7 @@ import { VideoIcon, CodeIcon, FileIcon } from "@radix-ui/react-icons";
 
 export default function Example({ project }: { project: Project }) {
   return (
-    <div className="divide-y divide-gray-200 overflow-hidden rounded-lg bg-white shadow  flex flex-col ">
+    <div className="divide-y divide-gray-200 overflow-hidden rounded-lg bg-gray-50 dark:bg-slate-700 dark:divide-slate-600 shadow  flex flex-col ">
       <div className="px-4 py-5 sm:px-6">
         <h3>{project.title}</h3>
       </div>
