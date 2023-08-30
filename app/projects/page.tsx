@@ -6,14 +6,17 @@ export const metadata: Metadata = {
 };
 const Projects = () => {
   return (
-    <main>
+    <main className="max-w-5xl ">
       <h1>Projects</h1>
-      <p>Work in progress...come back later 😊</p>
-      {/* <div className="grid sm:grid-cols-2 xl:grid-cols-3 grid-cols-1  "> */}
-      {/*   {projects.map((project) => ( */}
-      {/*     <ProjectCard key={project.id} project={project} /> */}
-      {/*   ))} */}
-      {/* </div> */}
+      <p className="my-4">
+        A few projects that {"I've"} built during my free time to solve various
+        problems {"I've"} encountered.
+      </p>
+      <div className="grid sm:grid-cols-2 xl:grid-cols-3 grid-cols-1 gap-4">
+        {projects.map((project) => (
+          <ProjectCard key={project.id} project={project} />
+        ))}
+      </div>
     </main>
   );
 };

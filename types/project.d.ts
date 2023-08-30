@@ -8,5 +8,6 @@ export interface Project {
     twitter?: string;
     loom?: string;
   };
+  technology?: string[];
   id: number;
 }
