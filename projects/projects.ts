@@ -7,6 +7,7 @@ export const projectsData: Project[] = [
       "Rails-like CLI to quickly generate resources (models, controllers, views, etc.) for your Nextjs + Drizzle application. Quick commands to initialize Drizzle, TRPC, and NextAuth.",
     links: {
       github: "https://github.com/nicoalbanese/kirimase",
+      loom: "https://www.loom.com/share/d36211cd28b74917a78c315599f518b7?sid=53f75acd-7fbd-4eb8-82a0-d7514941d963",
     },
   },
   {
