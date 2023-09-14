@@ -2,12 +2,13 @@ import { Project } from "@/types/project";
 export const projectsData: Project[] = [
   {
     id: 0,
-    title: "Kirimase (WIP)",
+    title: "Kirimase",
     description:
-      "Rails-like CLI to quickly generate resources (models, controllers, views, etc.) for your Nextjs + Drizzle application. Quick commands to initialize Drizzle, TRPC, and NextAuth.",
+      "Rails-like CLI to quickly generate resources (models, controllers, views, etc.) for your Nextjs application. Quick commands to initialize Drizzle, TRPC, and NextAuth.",
     links: {
       github: "https://github.com/nicoalbanese/kirimase",
-      loom: "https://www.loom.com/share/d36211cd28b74917a78c315599f518b7?sid=53f75acd-7fbd-4eb8-82a0-d7514941d963",
+      loom: "https://www.loom.com/share/Build-Full-Stack-Nextjs-Apps-Faster-with-Kirimase-cb329939c83b4c9eb6a56abfd2638bd4?sid=18d970c9-83a3-4b22-9301-ca5ebd8fa741",
+      twitter: "https://twitter.com/nicoalbanese10/status/1700901382444749001",
     },
   },
   {
@@ -45,7 +46,7 @@ export const projectsData: Project[] = [
       "Nextjs app that dynamically pulls data from our portfolio management system on Airtable saving hours of manual data entry.",
     id: 4,
     links: {
-      github: "https://github.com/nicoalbanese/basextend-mvp",
+      github: "https://github.com/nicoalbanese/ascension-site-rebrand",
       loom: "https://twitter.com/nicoalbanese10/status/1385157904731361280",
     },
   },
