@@ -8,7 +8,7 @@ export const projectsData: Project[] = [
     links: {
       github: "https://github.com/nicoalbanese/kirimase",
       loom: "https://www.loom.com/share/Build-Full-Stack-Nextjs-Apps-Faster-with-Kirimase-cb329939c83b4c9eb6a56abfd2638bd4?sid=18d970c9-83a3-4b22-9301-ca5ebd8fa741",
-      twitter: "https://twitter.com/nicoalbanese10/status/1700901382444749001",
+      article: "https://twitter.com/nicoalbanese10/status/1700901382444749001",
     },
   },
   {
@@ -68,7 +68,7 @@ export const projectsData: Project[] = [
     links: {
       loom: "https://www.youtube.com/watch?v=Is60Iji0tZw&",
       github:
-        "https://www.airtable.com/universe/exp6xDW3DtWVmZTAg/vc-portfolio-database-template",
+        "https://www.airtable.com/universe/expoadDDTsK4qWIzz/vc-portfolio-database-template",
       article: "/writing/managing-vc-portfolio-airtable",
     },
   },
